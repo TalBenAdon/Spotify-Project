@@ -1,0 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.song-img img {
+  width: 10rem;
+  height: 10rem;
+}
