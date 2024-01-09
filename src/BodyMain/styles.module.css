@@ -1,0 +1,6 @@
+.BodyMainContainer {
+    display: flex;
+    background-color: var(--background-color);
+    height: 400px;
+    flex: 1;
+}
