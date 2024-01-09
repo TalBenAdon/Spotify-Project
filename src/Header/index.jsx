@@ -1,7 +1,9 @@
 import React from 'react'
-
+import styles from './styles.module.css'
 export default function Header() {
     return (
-        <div></div>
+        <header className={styles.header}>
+            Header
+        </header>
     )
 }

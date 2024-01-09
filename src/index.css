@@ -2,7 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  color: white;
+  background-color: black;
 }
+
 
 .song-img img {
   width: 10rem;

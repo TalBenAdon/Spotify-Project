@@ -1,7 +1,12 @@
 import React from 'react'
-
+import ReactPlayer from 'react-player'
 export default function PlayerNavBar() {
     return (
-        <div>PlayerNavBar</div>
+        <>
+            <ReactPlayer url='' />
+            <div>
+                PlayerNavBar
+            </div>
+        </>
     )
 }
