@@ -1,0 +1,11 @@
+.reactPlayer {
+    display: none;
+}
+
+.playerNavBar {
+
+    background-color: var(--background-color);
+    border: white 2px solid;
+    grid-row: 3/4;
+    grid-column: -4/-1;
+}

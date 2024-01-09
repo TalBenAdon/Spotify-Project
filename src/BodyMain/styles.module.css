@@ -1,6 +1,6 @@
-.BodyMainContainer {
-    display: flex;
+.bodyMainContainer {
     background-color: var(--background-color);
-    height: 400px;
-    flex: 1;
+    border: 2px solid white;
+    grid-row: 2/3;
+    grid-column: 1/4;
 }

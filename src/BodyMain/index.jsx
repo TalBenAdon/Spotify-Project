@@ -1,16 +1,17 @@
 import React from 'react'
-import SongsList from './SongsList'
+
 import styles from './styles.module.css';
 import NavBar from './NavBar';
+import MainContent from './MainContent';
 
 
 export default function BodyMain() {
 
     return (
-        <div >
-            Body
+        <div className={styles.bodyMainContainer} >
+
             <NavBar />
-            <SongsList />
+            <MainContent />
         </div>
     )
 }
