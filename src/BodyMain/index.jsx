@@ -1,16 +1,16 @@
 import React from 'react'
 import SongsList from './SongsList'
-import Search from './Search'
+import styles from './styles.module.css';
+import NavBar from './NavBar';
+
 
 export default function BodyMain() {
 
-
-
     return (
-        <div>
-            <Search />
+        <div >
+            Body
+            <NavBar />
             <SongsList />
-
         </div>
     )
 }

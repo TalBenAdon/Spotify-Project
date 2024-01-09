@@ -1,6 +1,7 @@
 .header {
     height: 8rem;
-    background-color: rgba(18, 18, 18, 255);
-    color: inherit;
-
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
