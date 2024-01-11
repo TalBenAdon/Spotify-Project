@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Song from './Song'
-
+import axios from 'axios'
+import SongContext from '../../../Context/SongContext'
 
 
 export default function SongsList() {
-    const [useSong, setUseSong] = useState('')
+    const { useSongs } = useContext(SongContext)
+    console.log(useSongs);
 
+    const renderedSongs = [...useSongs]
 
     return (
         <div>
+            {renderedSongs.map(song => {
+                return <Song picture={song.thumbnail[0].url} title={song.title} songLength={song.lengthText} videoId={song.videoId} />
+            })}
 
 
         </div>

@@ -5,7 +5,9 @@
 .playerNavBar {
 
     background-color: var(--background-color);
-    border: white 2px solid;
+
     grid-row: 3/4;
     grid-column: -4/-1;
+    border-radius: 20px;
+    margin: 0 5px 5px 5px;
 }
