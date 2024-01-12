@@ -1,12 +1,11 @@
 import React from 'react'
-import Header from './Header'
 import BodyMain from './BodyMain'
-import PlayerNavBar from './PlayerNavBar'
 import styles from './styles.module.css'
-
 import SongContext from './Context/SongContext'
 import { useState } from 'react'
-
+import UserProvider from './Context/UserContext'
+import { Route, Routes } from 'react-router-dom'
+import MainLayout from './MainLayout'
 export default function App() {
   const [useSongs, setUseSongs] = useState('')
   const [searchedSong, setSearchedSong] = useState('jazz')
@@ -17,9 +16,19 @@ export default function App() {
     <main className={styles.mainGridContainer}>
       <SongContext.Provider value={{ useSongs, setUseSongs, searchedSong, setSearchedSong }}>
 
-        <Header />
-        <BodyMain />
-        <PlayerNavBar />
+        <UserProvider>
+          <Routes>
+            <Route element={<MainLayout />}>
+
+              <Route index element={<BodyMain />} />
+
+
+
+            </Route>
+
+          </Routes>
+        </UserProvider>
+
       </SongContext.Provider>
     </main>
 

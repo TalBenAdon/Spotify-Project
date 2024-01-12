@@ -1,6 +1,6 @@
 import React from 'react'
 import { useContext } from 'react'
-import SongContext from '../../Context/SongContext'
+import SongContext from '../../../Context/SongContext'
 
 export default function Search() {
 
