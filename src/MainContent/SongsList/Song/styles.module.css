@@ -1,0 +1,48 @@
+.songContainer {
+    background-color: var(--background-color);
+    /* border: white solid 1px; */
+    display: flex;
+    padding: 1rem 0 1rem;
+    max-width: 900px;
+    overflow: hidden;
+}
+
+.songImg {
+    width: 200px;
+    height: 112.2px;
+    border-radius: 20px;
+    margin-right: 1rem;
+
+}
+
+.imgButtonContainer {
+    background-color: var(--background-color);
+    position: relative;
+
+}
+
+.addToFavButton {
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: inherit;
+    cursor: pointer;
+    position: absolute;
+    left: 10.5rem;
+}
+
+.songTitle {
+    background-color: var(--background-color);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.songLength {
+    background-color: var(--background-color);
+    color: rgba(128, 128, 128, 0.784);
+}
+
+.songTextContanier {
+    background-color: var(--background-color);
+}
