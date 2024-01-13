@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react'
 import styles from './styles.module.css'
 import SongsList from './SongsList'
 import axios from 'axios';
-import SongContext from '../../Context/SongContext';
+import SongContext from '../Context/SongContext';
 export default function MainContent() {
     const { setUseSongs, searchedSong } = useContext(SongContext)
     console.log(searchedSong);
