@@ -17,7 +17,7 @@ export default function Song({ picture, title, songLength, videoId, song }) {
 
     }
 
-
+    console.log(song);
 
     return (
         <div className={styles.songContainer}>
