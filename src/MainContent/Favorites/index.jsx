@@ -1,24 +1,26 @@
-import React, { useContext, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './styles.module.css'
 import { UserContext } from '../../Context/UserContext'
+import axios from 'axios'
+import Login from '../../Pages/Login'
 export default function Favorites() {
-    const { favorites } = useContext(UserContext)
+    const [favorites, setFavorites] = useState([])
 
+    useEffect(() => {
+        try {
+            axios.get('http://localhost:4000/likedsongs/liked')
+                .then(res =>
+                    setFavorites(res.data)
+                )
+        } catch (error) {
+            console.log(error);
+        }
+    }, [])
+    console.log(favorites);
     return (
         <div className={styles.favoritesContainer}>
-            {console.log(favorites)}
-            {/* {favorites.map(favSong => {
-                <div>
 
-                    <img src={favSong.img} alt={favSong.title} />
-                    <div>
-                        <div>{favSong.title}</div>
-                        <div>{favSong.songLength}</div>
-                    </div>
 
-                </div>
-
-            })} */}
 
         </div>
     )
