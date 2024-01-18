@@ -1,20 +1,19 @@
 import React, { useContext } from 'react'
 import styles from './styles.module.css'
 import { UserContext } from '../../../Context/UserContext'
+import axios from 'axios'
 export default function Song({ picture, title, songLength, videoId, song }) {
+
 
     const { setFavorites, favorites } = useContext(UserContext)
     const onClickHandle = () => {
-        let favoritedSong = { ...favorites }
-        if (favoritedSong[song.videoId]) {
 
-            delete favoritedSong[song.videoId]
-        }
-        else {
-            favoritedSong = { ...favorites, [song.videoId]: song }
-        }
-        setFavorites(favoritedSong)
+        try {
 
+            axios.post('http://localhost:4000/likedsongs/liked', { videoId, title, songLength, picture })
+        } catch (error) {
+            console.log(error);
+        }
     }
 
     console.log(song);
